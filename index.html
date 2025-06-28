@@ -9,19 +9,96 @@
 <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
 </head>
 <body>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top" >
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <!-- Float links to the right. Hide them on small screens -->
-    <a href="#home"> <img src="icon.png" alt="Selectum Logo" style="width: 150px;"></a>
-    <div class="w3-right w3-hide-small">
-      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- HTML -->
+<nav class="navbar navbar-expand-lg fixed-top bg-white border-bottom py-3" style="font-family: 'Cormorant Garamond', serif;">
+
+  <div class="container">
+    <a href="#home">
+      <img src="icon.png" alt="Selectum Logo" style="width: 150px;">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+      <ul class="navbar-nav text-center gap-lg-4">
+        <li class="nav-item">
+          <a class="nav-link nav-hover" href="/tr/satilik">SATILIK</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-hover" href="/tr/kiralik">KİRALIK</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-hover" href="#projects">PROJELER</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-hover text-gold fw-semibold" href="/tr/e-teklif">E-TEKLİF</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle nav-hover" href="#" role="button" data-bs-toggle="dropdown">
+            KURUMSAL
+          </a>
+          <ul class="dropdown-menu text-start">
+            <li><a class="dropdown-item" href="#hakkimizda">HAKKIMIZDA</a></li>
+            <li><a class="dropdown-item" href="/tr/subeler">ŞUBELER</a></li>
+            <li><a class="dropdown-item" href="/tr/ekibimiz">EKİBİMİZ</a></li>
+            <li><a class="dropdown-item" href="/tr/basinda-biz">BASINDA BİZ</a></li>
+            <li><a class="dropdown-item" href="/tr/blogs">BLOG</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-hover" href="/tr/iletisim">İLETİŞİM</a>
+        </li>
+      </ul>
     </div>
   </div>
-</div>
+</nav>
+
+<!-- CSS -->
+<style>
+  .nav-link {
+    color: #111 !important;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.2px;
+    transition: color 0.3s ease;
+  }
+
+  .nav-hover:hover {
+    color: #b08a5b !important;
+  }
+
+  .text-gold {
+    color: #b08a5b !important;
+  }
+
+  .dropdown-menu {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+  }
+
+  .dropdown-item {
+    font-size: 16px;
+    color: #222;
+  }
+
+  .dropdown-item:hover {
+    background-color: #f8f8f8;
+    color: #b08a5b;
+  }
+</style>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1800px;" id="home">
@@ -93,10 +170,10 @@
     </div>
   </div>
 
-æ
+  
 
   <!-- About Section -->
-  <div class="w3-container w3-padding-32" id="about">
+  <div class="w3-container w3-padding-32" id="hakkimizda">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
       occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -115,20 +192,6 @@
     <div class="w3-col l3 m6 w3-margin-bottom">
       <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
       <h3>Jane Doe</h3>
-      <p class="w3-opacity">Architect</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
-      <h3>Mike Ross</h3>
-      <p class="w3-opacity">Architect</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
-      <h3>Dan Star</h3>
       <p class="w3-opacity">Architect</p>
       <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
       <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
@@ -157,7 +220,6 @@
 
 <!-- End page content -->
 </div>
-
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
